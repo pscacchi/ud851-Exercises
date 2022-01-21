@@ -62,6 +62,8 @@ public class VisualizerActivity extends AppCompatActivity
                 getResources().getBoolean(R.bool.pref_show_treble_default)));
         mVisualizerView.setMinSizeScale(1);
         mVisualizerView.setColor(getString(R.string.pref_color_red_value));
+
+        sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
 
     // TODO (2) Override the onSharedPreferenceChanged method and update the show bass preference
